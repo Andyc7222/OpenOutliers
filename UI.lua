@@ -46,7 +46,7 @@ local library = {
         ['colorpicker'] = 1100;
         ['watermark'] = 1300;
         ['notification'] = 1400;
-        ['cursor'] = 1500;
+        --['cursor'] = 1500;
     },
     stats = {
         ['fps'] = 0;
@@ -699,7 +699,7 @@ function library:init()
         self.images[i] = readfile(self.cheatname..'/assets/'..i..'.oh');
     end
 
-    self.cursor1 = utility:Draw('Triangle', {Filled = true, Color = fromrgb(255,255,255), ZIndex = self.zindexOrder.cursor});
+    --[[self.cursor1 = utility:Draw('Triangle', {Filled = true, Color = fromrgb(255,255,255), ZIndex = self.zindexOrder.cursor});
     self.cursor2 = utility:Draw('Triangle', {Filled = true, Color = fromrgb(85,85,85), self.zindexOrder.cursor-1});
     local function updateCursor()
         self.cursor1.Visible = self.open
@@ -713,7 +713,7 @@ function library:init()
             self.cursor2.PointB = self.cursor1.PointB + newVector2(1, 1)
             self.cursor2.PointC = self.cursor1.PointC + newVector2(1, 1)
         end
-    end
+    end]]
 
     local screenGui = Instance.new('ScreenGui');
     if syn then syn.protect_gui(screenGui); end
@@ -791,7 +791,7 @@ function library:init()
         if input.UserInputType == Enum.UserInputType.MouseMovement then
             if library.open then
                 mousemove:Fire(inputservice:GetMouseLocation());
-                updateCursor();
+                --updateCursor();
 
                 if library.CurrentTooltip ~= nil then
                     local mousePos = inputservice:GetMouseLocation()
@@ -842,7 +842,7 @@ function library:init()
             actionservice:UnbindAction('FreezeMovement');
         end
 
-        updateCursor();
+        --updateCursor();
         for _,window in next, self.windows do
             window:SetOpen(bool);
         end
