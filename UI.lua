@@ -59,7 +59,7 @@ local library = {
         ['colortrans'] = 'https://raw.githubusercontent.com/portallol/luna/main/modules/trans.png';
     };
     numberStrings = {['Zero'] = 0, ['One'] = 1, ['Two'] = 2, ['Three'] = 3, ['Four'] = 4, ['Five'] = 5, ['Six'] = 6, ['Seven'] = 7, ['Eight'] = 8, ['Nine'] = 9};
-    signal = loadstring(game:HttpGet('https://raw.githubusercontent.com/Andyc7222/OpenOutliers/main/Signal.lua'))();
+    signal = loadstring(game:HttpGet('https://raw.githubusercontent.com/Andyc7222/OpenOutliers/main/Signal'))();
     open = false;
     opening = false;
     hasInit = false;
@@ -4571,7 +4571,7 @@ function library:init()
             objects = {};
             text = {
                 {self.cheatname, true},
-                {"Private", true},
+                {"Public", true},
                 {self.gamename, true},
                 {'0 fps', true},
                 {'0ms', true},
